@@ -34,7 +34,7 @@ git config --global user.name "xxx"
 
 >$ sc config i8042prt start= auto
 
-#### 清除网页所有定时器（暴力清除）
+#### 清除网页所有定时器
 
 ```
 for(var i = 1; i < 1000; i++) {
