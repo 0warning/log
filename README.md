@@ -19,3 +19,16 @@ for (var i = 1; i < 1000; i++) {
 ```
 \u0336
 ```
+
+#### Linux批量替换
+
+```
+find . -name *.ftl | xargs sed -i 's/http:\/\/www\.gsmz\.gov\.cn\//\//g'
+
+find . -name *.ftl | xargs sed -i 's/http:\/\/www\.gsmz\.gov\.cn/\//g'
+
+
+find . -name *.html | xargs sed -i 's/http:\/\/www\.gsmz\.gov\.cn\//\//g'
+
+find . -name *.html | xargs sed -i 's/http:\/\/www\.gsmz\.gov\.cn/\//g'
+```
