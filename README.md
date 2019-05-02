@@ -32,3 +32,9 @@ find . -name *.html | xargs sed -i 's/http:\/\/www\.gsmz\.gov\.cn\//\//g'
 
 find . -name *.html | xargs sed -i 's/http:\/\/www\.gsmz\.gov\.cn/\//g'
 ```
+
+#### Argument list too long
+
+```
+ls -l| awk '{ print "rm -f ",$9}'|sh
+```
