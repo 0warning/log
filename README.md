@@ -38,3 +38,22 @@ find . -name *.html | xargs sed -i 's/http:\/\/www\.gsmz\.gov\.cn/\//g'
 ```
 ls -l| awk '{ print "rm -f ",$9}'|sh
 ```
+
+#### linux autostart
+
+sh:
+
+```
+#!/bin/sh
+#chkconfig: 2345 80 90
+#description:autostart
+```
+
+system:
+
+```
+cd /etc/rc.d/init.d/
+chmod +x sh
+chkconfig --add sh
+chkconfig sh on
+```
