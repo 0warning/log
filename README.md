@@ -57,3 +57,17 @@ chmod +x sh
 chkconfig --add sh
 chkconfig sh on
 ```
+
+#### nginx 跨域
+
+```
+location /xxx {
+  if ($request_method = 'OPTIONS') {
+    add_header Access-Control-Allow-Origin *;
+    add_header Access-Control-Allow-Methods GET,POST,PUT,DELETE,PATCH,OPTIONS;
+    add_header Access-Control-Allow-Headers *;
+    return 200;
+  }
+  proxy_pass http://xxx;	
+}
+```
